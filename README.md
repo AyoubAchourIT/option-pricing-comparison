@@ -1,66 +1,61 @@
-# Comparaison de Methodes de Pricing d'une Option Call Europeenne
+# Comparaison de Méthodes de Pricing d'une Option Call Européenne
 
-Ce projet Python propose une demonstration simple de trois methodes classiques pour valoriser une option call europeenne :
+Ce projet Python propose une démonstration simple de trois méthodes classiques pour valoriser une option call européenne :
 
-- la formule fermee de Black-Scholes
+- la formule fermée de Black-Scholes
 - la simulation de Monte Carlo
 - l'arbre binomial de Cox-Ross-Rubinstein (CRR)
 
-L'objectif est pedagogique : comparer plusieurs approches de pricing dans un script clair et facile a lire.
+L'objectif est pédagogique : comparer plusieurs approches de pricing dans un script clair et facile à lire.
 
-## Parametres utilises
+## Paramètres utilisés
 
-Les calculs sont realises avec les parametres suivants :
+Les calculs sont réalisés avec les paramètres suivants :
 
 - `S0 = 100` : prix initial du sous-jacent
 - `K = 100` : prix d'exercice
 - `r = 3%` : taux sans risque
-- `sigma = 20%` : volatilite
-- `T = 1` : maturite en annee
+- `sigma = 20%` : volatilité
+- `T = 1` : maturité en année
 
-## Methodes comparees
+## Méthodes comparées
 
 ### 1. Black-Scholes
 
-Cette methode utilise la formule analytique standard pour le prix d'un call europeen.
+Cette méthode utilise la formule analytique standard pour le prix d'un call européen.
 
 ### 2. Monte Carlo
 
-Cette methode simule de nombreux prix terminaux du sous-jacent sous l'hypothese Black-Scholes, puis calcule la moyenne actualisee des payoffs.
+Cette méthode simule de nombreux prix terminaux du sous-jacent sous l'hypothèse Black-Scholes, puis calcule la moyenne actualisée des payoffs.
 
 ### 3. Arbre binomial CRR
 
-Cette methode discretise l'evolution du sous-jacent dans un arbre binomial et utilise une induction a rebours pour obtenir le prix de l'option.
+Cette méthode discrétise l'évolution du sous-jacent dans un arbre binomial et utilise une induction à rebours pour obtenir le prix de l'option.
 
-## Resultats produits
+## Résultats produits
 
 Le script :
 
-- affiche le prix obtenu avec chaque methode
-- affiche les ecarts entre les methodes
-- genere un graphique de convergence du prix binomial vers le prix Black-Scholes
+- affiche le prix obtenu avec chaque méthode
+- affiche les écarts entre les méthodes
+- génère un graphique de convergence du prix binomial vers le prix Black-Scholes
 - sauvegarde ce graphique dans le fichier `binomial_convergence.png`
 
-## Execution du projet
+## Exécution du projet
 
-### 1. Installer les dependances
+### 1. Installer les dépendances
 
 ```bash
 pip install -r requirements.txt
-```
 
+pip install -r requirements.txt
 ### 2. Lancer le script
-
 ```bash
 python option_pricing_comparison.py
-```
-
 ## Fichiers du projet
+- option_pricing_comparison.py : script principal
+- requirements.txt : dépendances Python
+- README.md : présentation du projet
 
-- `option_pricing_comparison.py` : script principal
-- `requirements.txt` : dependances Python
-- `README.md` : presentation du projet
-
-## Public vise
-
-Ce depot est adapte a une demonstration de cours ou a une premiere introduction aux methodes numeriques et analytiques utilisees en finance quantitative.
+## Public visé
+Ce dépôt est adapté à une démonstration de cours ou à une première introduction aux méthodes numériques et analytiques utilisées en finance quantitative.
