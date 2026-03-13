@@ -47,11 +47,11 @@ Le script :
 
 ```bash
 pip install -r requirements.txt
-
-pip install -r requirements.txt
+```
 ### 2. Lancer le script
 ```bash
 python option_pricing_comparison.py
+```
 ## Fichiers du projet
 - option_pricing_comparison.py : script principal
 - requirements.txt : dépendances Python
